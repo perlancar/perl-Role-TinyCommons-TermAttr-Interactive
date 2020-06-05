@@ -21,6 +21,11 @@ Try to determine whether terminal application is running interactively. Will
 first check the INTERACTIVE environment variable, then check using C<-t STDOUT>.
 
 
+=head1 ENVIRONMENT
+
+=head2 INTERACTIVE
+
+
 =head1 SEE ALSO
 
 L<Role::TinyCommons>
