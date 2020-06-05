@@ -7,6 +7,17 @@ package Role::TinyCommons::TermAttr::Interactive;
 
 use Role::Tiny;
 
+sub termattr_interactive {
+    my $self = shift;
+    if (defined $ENV{INTERACTIVE}) {
+        $self->{_termattr_debug_info}{interactive_from} = 'INTERACTIVE env';
+        return $ENV{INTERACTIVE};
+    } else {
+        $self->{_termattr_debug_info}{interactive_from} = '-t STDOUT';
+        return (-t STDOUT);
+    }
+}
+
 1;
 # ABSTRACT: Determine whether terminal application is running interactively
 
